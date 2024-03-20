@@ -11,7 +11,7 @@ class HomeView(View):
         return render_template('html/index.html')
 
 def get_video_info():
-    video_url = request.json['video_url']
+    video_url = request.args.get('video_url')
     if video_url:
         try:
             resolutions, thumbnail, title = get_informcao_video(video_url)

@@ -77,12 +77,11 @@
         // Exibir o indicador de carregamento
         document.getElementById('loading').style.display = 'block';
 
-        fetch('/api/download', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
+        fetch('/api/download?video_url=' + encodeURIComponent(data.video_url), {
+          method: 'GET',
+          headers: {
+              'Content-Type': 'application/json'
+          }
         })
         .then(response => response.json())
         .then(data => {
