@@ -3,7 +3,7 @@ from flask import render_template, request, jsonify
 from flask.views import View
 from pytube import YouTube
 
-from .utils import get_informcao_video
+from .utils import get_informacao_video
 
 
 class HomeView(View):
@@ -14,7 +14,7 @@ def get_video_info():
     video_url = request.args.get('video_url')
     if video_url:
         try:
-            resolutions, thumbnail, title = get_informcao_video(video_url)
+            resolutions, thumbnail, title = get_informacao_video(video_url)
             return jsonify({'success': True, 'resolutions': resolutions, 'thumbnail': thumbnail, 'title': title})
         except Exception as e:
             return jsonify({'success': False, 'error': str(e)})
