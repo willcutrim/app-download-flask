@@ -1,4 +1,4 @@
-from apps.urls import add_routes
+from api.urls import add_routes
 from flask import Flask
 
 app = Flask(__name__)

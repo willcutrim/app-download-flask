@@ -1,4 +1,4 @@
-from apps.controllers import HomeView, download_video, get_video_info
+from api.controllers import HomeView, download_video, get_video_info
 
 
 def add_routes(app):
