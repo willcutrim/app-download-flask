@@ -3,7 +3,7 @@ from flask import render_template, request, jsonify
 from flask.views import View
 from pytube import YouTube
 
-from .utils import get_informacao_video
+from utils import get_informacao_video
 
 
 class HomeView(View):
